@@ -1,3 +1,5 @@
 # CryptoAliens
-The main purpose of this project was to deepen my understanding surrounding blockchain development. In order to deploy the Crypto Collectable dApp
-                I utilized Solidity, Web3.js, Ganache, and Truffle. 
+The main purpose of this project was to deepen my understanding surrounding blockchain development. In order to deploy the Crypto Collectable dApp I utilized Solidity, Web3.js, Ganache, and Truffle. In this dApp, a user inputs a string which creates a randomized 16 digit 
+DNA sequence. This DNA is then used to create an alien that has unique features. The alien can feed on other aliens, or a CryptoKitty, to modify their DNA and create new aliens. Users can transfer ownership of their alien to another user. Users can attack other ailens to gain levels. These levels can be used to change the name of your alien or change their DNA.
+
+There are many areas of the project I'd like to expand. I plan to use Vue.js to enchance the front-end by adding user profiles which would display all aliens owned. You would be able to visit other user's profiles and attack their aliens displayed. I'm currently creating visual models for the aliens that correspond with their DNA. The dApp is ran locally on my PC, but once development progresses I'd like to deploy it to the Ethereum blockchain. 

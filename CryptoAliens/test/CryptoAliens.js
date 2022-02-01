@@ -19,7 +19,11 @@ contract("alienfactory.sol", (accounts) => {
 
     xcontext("with the single-step transfer scenario", async () => {
         it("should transfer a alien", async () => {
-          // start here.
+          const result = await contractInstance.createRandomAlien(alienNames[0], {from: alice});
+          const alienId = result.logs[0].args.alienId.toNumber();
+          await contractInstance.transferFrom(alice, bob, alienId, {from: alice});
+          const newOwner = await contractInstance.ownerOf(alienId);
+          assert.equal(newOwner, bob);
         })
     })
     xcontext("with the two-step transfer scenario", async () => {

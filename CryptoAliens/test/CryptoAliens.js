@@ -12,7 +12,7 @@ contract("alienfactory.sol", (accounts) => {
         assert.equal(result.receipt.status, true);
         assert.equal(result.logs[0].args.name, alienNames[0]);
     })
-    it("should not allow two zombies", async () => {
+    it("should not allow two aliens", async () => {
         await contractInstance.createRandomAlien(alienNames[0], {from: alice});
         await utils.shouldThrow(contractInstance.createRandomAlien(alienNames[1], {from: alice}));
     })
